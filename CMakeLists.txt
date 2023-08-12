@@ -250,7 +250,7 @@ if (PUGIXML_BUILD_TESTS)
   file(GLOB fuzz-sources ${fuzz-pattern})
   list(REMOVE_ITEM test-sources ${fuzz-sources})
 
-  add_custom_target(check
+  add_custom_target(check 
     COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure)
 
   add_executable(pugixml-check ${test-sources})
